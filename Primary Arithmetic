@@ -1,0 +1,44 @@
+#include <vector>
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+int main(){
+vector<int> n1,n2;
+
+int s1,s2;
+
+while(cin>>s1>>s2){
+
+if(s1==0&&s2==0)break;
+n1.clear();
+n2.clear();
+ while(s1){
+ n1.push_back(s1%10);
+ s1/=10;
+ } 
+ while(s2){
+ n2.push_back(s2%10);
+ s2/=10;
+ }
+ n1.push_back(0);
+    n2.push_back(0);
+ 
+  int count=0;
+  for(int i=0;i<min(n1.size(),n2.size());i++){
+  n1[i]+=n2[i];
+  }
+  for(int i=0;i<max(n1.size(),n2.size());i++){
+   if(n1[i]>=10){
+   n1[i]=n1[i]%10,n1[i+1]++,count++; 
+   }
+  }
+  
+  if(count==0)cout<<"No carry operation."<<endl;
+  else if(count==1)cout<<count<<" carry operation."<<endl;
+  else cout<<count<<" carry operations."<<endl;
+}
+return 0;
+
+}
