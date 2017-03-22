@@ -1,0 +1,24 @@
+#include <iostream>
+#include <cctype>//型式
+using namespace std;
+
+char c;
+int len;
+int main(){
+int count[256];//不能宣告在全域
+for(int i=0;i<256;i++)count[i]=0;//淨空array
+while(cin>>c){
+count[toupper(c)]++,len++;
+}
+	while(--len){
+	
+	
+	for(c='A';c<='Z';c++){
+	if(len==count[c])
+	cout<<c<<" "<<count[c]<<endl;
+		}
+		
+	}
+
+return 0;
+}
