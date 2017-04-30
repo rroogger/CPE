@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+int jump[3002];
+int now[3002];
+
+int main(){
+ int n;
+	while(cin>>n){
+	for(int i=0;i<n;i++){
+	jump[i]=0;
+	cin>>now[i]; 
+	/*cout<<now[i];*/
+	}
+		int bad=0;
+		for(int i=1;i<n;i++){
+		int diff=abs(now[i]-now[i-1]);
+		if(jump[diff]==0)jump[diff]++;
+		else {bad=1;break;}
+		
+		}
+		
+		
+		if(bad==0)cout<<"Jolly"<<endl;	
+		else cout<<"Not jolly"<<endl;
+		
+		}
+
+}
+
