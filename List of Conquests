@@ -1,25 +1,24 @@
-
 #include <iostream>
 #include <string>
-#include <map>
-
 using namespace std;
 
 int main(){
-	int n;
-	map<string,int> record;//紀錄國家與人數
-	while (cin>>n) {//==1??  猜:只有一個數字
-		string country, tmp;// tmp??
-		while(n--){
-			 	cin>>country;
-			 	record[country]++;
-			 	getline(cin,tmp);	 					
-		}	
-		for(map<string,int>::iterator i=record.begin();i!=record.end();i++)
-			cout<<i->first<<" "<<i->second << endl;//first 就是	第一個記錄到的東西
-	}
+	int a;
+	int SP=0;
+	int EN=0;
+	cin>>a;
+	string s;
+		while(cin>>s){
+		if(s=="Spain")
+			SP++;
+		else if(s=="England")
+			EN++;
+		else continue;
+		
+		}
+			cout<<"England "<<EN<<endl;
+			cout<<"Spain "<<SP<<endl;
 
 
 return 0;
-
 }
