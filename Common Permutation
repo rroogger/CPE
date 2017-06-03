@@ -8,8 +8,8 @@ int main(){
 	string a,b;
 	
 	while(getline(cin,a),getline(cin,b)){
-	sort(a.begin(),a.end());
-	sort(b.begin(),b.end());
+	sort(a.begin(),a.end());//getline不用vector
+	sort(b.begin(),b.end());//getline不用vector
 	//cout<<a<<endl<<b<<endl;
 	int i=0;	
 	int j=0;	
