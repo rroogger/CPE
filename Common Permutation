@@ -1,36 +1,42 @@
 #include <iostream>
-#include <string>
 #include <algorithm>
-
+#include <string>
 using namespace std;
 
 int main(){
-	string a,b;
+	string sa,sb;
+		//while(getline(cin,sa),getline(cin,sb)){
+		while(cin>>sa>>sb){
+		sort(sa.begin(),sa.end());//getline 不用vector
+		sort(sb.begin(),sb.end());//getline 不用vector
 	
-	while(getline(cin,a),getline(cin,b)){
-	sort(a.begin(),a.end());//getline不用vector
-	sort(b.begin(),b.end());//getline不用vector
-	//cout<<a<<endl<<b<<endl;
-	int i=0;	
-	int j=0;	
-		while(i<a.length()&&j<b.length()){
-			if(a[i]==b[j]){
-				cout<<a[i];
-				i++;
-				j++;
-			}
+	
+			int i=0;
+			int j=0;
+		//for(int i=0;i<sa.length();i++){
+				while(i<sa.length()&&j<sb.length()){
+				
 		
-			else{
-				if(a[i]<b[j])
-				i++;
-				else
-				j++;
+				
+			if(sa[i]==sb[j]){
+			cout<<sa[i];
+			i++;
+			j++;
 			}
 			
-		}
-		
-	cout<<endl;
-	
+			else {
+			if(sa[i]>sb[j])
+			j++;
+			
+			if(sa[i]<sb[j])
+			i++;
+			}
+			
+				}
+				cout<<endl;
+		//}
 	}
+		
+
 return 0;
 }
