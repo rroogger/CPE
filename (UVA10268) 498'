@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+#include <sstream>
+using namespace std;
+
+int main(){
+	int x;	
+	while(cin>>x){
+	string s;
+	getline(cin,s);getline(cin,s);	
+	
+	int n=0;
+	int a;
+	istringstream tin(s);
+	while(tin>>a)
+	n++;
+	n--;
+	long long val=0;
+	
+	istringstream sin(s);
+	
+	while(sin>>a){ 
+	if(n==0)break;
+	val*=x;
+	val+=n--*a;
+		}
+		cout<<val<<endl;
+}
+return 0;
