@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+#include <sstream>
+using namespace std;
+
+int main(){
+int n;
+while(cin>>n){
+	int a,b;
+	int avg=0;
+	while(cin>>a>>b){
+	if((a-b<0)||(a+b)%2==1)cout<<"impossible"<<endl;
+	else{
+	avg=(a+b)/2;
+	//cout<<avg;
+	//cout<<a<<b<<endl;
+	cout<<avg<<" "<<avg-b<<endl;
+	n--;
+	}
+	}
+	
+	
+	
+
+}
+
+
+return 0;
+}
