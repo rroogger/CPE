@@ -2,32 +2,27 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
-int main(){
-vector <int> n;
-int x;//2
-int d;//3
-int c;
-cin>>x;	//2
-while(x--){
-	cin>>d;//3
-	n.clear();
-	for(int i=0;i<d;i++)
-	{
-		cin>>c;
-		n.push_back(c);
-		
-	}	
-	sort(n.begin(),n.end());
-	int mid=n[d/2];
-	int sum=0;
-	for(int i=0;i<d;i++)
-	{
-	sum+=abs(mid-n[i]);
-	}
-	cout<<sum<<endl;
-	
-}
 
+int main(){
+int n;
+cin>>n;
+while(n--){
+	int cn;
+	cin>>cn;
+	vector<int> v;
+		
+		for(int i=0;i<cn;i++){
+		int num;
+		cin>>num;
+		v.push_back(num);
+		}
+		sort(v.begin(),v.end());
+		int mid=v[cn/2];
+		int sum=0;
+		 	for(int i=0;i<cn;i++){
+		 	sum+=abs(mid-v[i]);
+		 	}
+		 	cout<<sum<<endl;
+}
 return 0;
 }
-
