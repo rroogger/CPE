@@ -1,0 +1,11 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+int n;
+while(cin>>n){	
+cout<<n+(n/2)<<endl;//每兩個就借一瓶 反正還了也用不到
+}
+return 0;
+}
