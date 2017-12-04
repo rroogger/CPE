@@ -1,0 +1,33 @@
+/*on rn
+  O  O EMIRP
+  O  X prime
+  X  o prime
+  X  X 
+  */
+#include <iostream>
+
+using namespace std;
+
+bool test(int x){
+for(int i=2;i<x;i++)
+if(x%i==0)return false;
+ return true;
+}
+
+int main(){
+int on;
+while(cin>>on){
+cout<<on<<" is ";
+int rn=0,n=on;
+	while(n){rn*=10;rn+=n%10;n/=10;}
+		if(test(on)){
+				if(test(rn)){
+					if(on==rn)cout<<"prime."<<endl;
+					else cout<<"emirp."<<endl;
+			}else cout<<"prime."<<endl;
+		}else cout<<"not prime."<<endl;
+		
+}
+
+return 0;
+}
